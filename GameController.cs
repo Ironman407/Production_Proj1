@@ -11,9 +11,6 @@ public class GameController : MonoBehaviour
     public Transform guardSpawn;
     public PlayerController playerController;
     public int guardCount;
-    private float spawnWait;
-    private float startWait;
-    int i;
 
     private bool gameOver;
     
