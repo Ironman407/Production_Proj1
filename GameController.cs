@@ -34,7 +34,7 @@ public class GameController : MonoBehaviour
     void SpawnGuard ()
     {
         Debug.Log("Spawn Guards.");
-        while (guardCount < 5)
+        if (guardCount < 5)
         {
             Debug.Log("Doesn't Spawn Guards.");
             Instantiate(guard, guardSpawn);
@@ -50,6 +50,7 @@ public class GameController : MonoBehaviour
         {
             Debug.Log("Spawn Them1.");
             InvokeRepeating("SpawnGuard", 1f, 3f);
+            playerController.hasItem = false;
         }
     }
 
